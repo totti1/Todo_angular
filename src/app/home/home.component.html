@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 >{{title | uppercase}}</h1>
+    <img alt="Random image" appColorChange>
+    <app-todo-form (toDoData)='parentFunc($event)'></app-todo-form>
+    <div>
+        <ul>
+            <li *ngFor='let myTodo of lists; let i=index' >
+                {{myTodo.task}}
+                <span>My total {{myTodo.price}}</span>
+                <span>My total with taxes {{myTodo.price | tax}}</span>
+                <app-to-do-description [desc]='myTodo' (gone)='taskDeleted($event,i)'></app-to-do-description>
+            </li>
+        </ul>
+    </div>
+</div>
+

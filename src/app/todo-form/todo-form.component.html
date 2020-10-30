@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <h2 class="text-center">Create a new Goal</h2>
+    <hr>
+    <form (ngSubmit)='getToDo()' #todoForm='ngForm'>
+        <div class="form-group">
+  
+            <label for="task">Task</label>
+            <input type="text" required class="form-control" [(ngModel)]="mylist.task" name="task" id="task">
+  
+        </div>
+        <div class="form-group">
+  
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="4" required [(ngModel)]="mylist.description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+  
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price"required [(ngModel)]="mylist.price" name="price">
+  
+        </div>
+        <button type="submit" class="btn btn-success">Add My todo</button>
+    </form>
+  </div>
